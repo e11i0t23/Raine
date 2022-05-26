@@ -9,7 +9,7 @@ PCB for the Raine by AKB, Please note the open source version has a reset button
 ### How to order
 The steps bellow outline how to order this pcb with assembly through the JLCPCB platform  
 
-1) From the releases section download CamOutputs.zip, BOM_Raine.xlsx, and PNP_Raine_Back.xlsx
+1) From the releases section download CAMOutputs.zip, BOM_Raine.xlsx, and PNP_Raine_Back.xlsx
 2) Load the new order section of Jlcpcb, uploading CamOutputs.zip as gerber file
 3) Most settings can be left as defualt, reccomend selecting LeadFree HASL under surface finish,
     (Note only Green or Black soldermask can be used with assembly)
