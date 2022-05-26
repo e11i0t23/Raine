@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -3345,6 +3345,7 @@
 <part name="R5" library="Keyboard_parts" library_urn="urn:adsk.eagle:library:6380734" deviceset="R0603" device="" package3d_urn="urn:adsk.eagle:package:6154640/2" value="22"/>
 <part name="R6" library="Keyboard_parts" library_urn="urn:adsk.eagle:library:6380734" deviceset="R0603" device="" package3d_urn="urn:adsk.eagle:package:6154640/2" value="22"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="SW2" library="Keyboard_parts" library_urn="urn:adsk.eagle:library:6380734" deviceset="TL3342F160QG/TR" device="" package3d_urn="urn:adsk.eagle:package:6174039/2" value="TL3342F160QG/TR"/>
 </parts>
 <sheets>
 <sheet>
@@ -5418,6 +5419,10 @@
 <instance part="GND11" gate="1" x="38.1" y="0" smashed="yes">
 <attribute name="VALUE" x="35.56" y="-2.54" size="1.778" layer="96"/>
 </instance>
+<instance part="SW2" gate="G$1" x="69.85" y="48.26" smashed="yes" rot="R270">
+<attribute name="NAME" x="86.3981" y="60.9892" size="1.27291875" layer="95" rot="R270"/>
+<attribute name="VALUE" x="52.0244" y="60.9926" size="1.273259375" layer="96" rot="R270"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -5426,7 +5431,10 @@
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="SW1" gate="G$1" pin="1"/>
-<wire x1="57.15" y1="53.34" x2="58.42" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="57.15" y1="53.34" x2="58.42" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="SW2" gate="G$1" pin="1"/>
+<junction x="58.42" y="55.88"/>
+<wire x1="58.42" y1="55.88" x2="58.42" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -5461,20 +5469,28 @@
 <net name="RST" class="0">
 <segment>
 <pinref part="SW1" gate="G$1" pin="2"/>
-<wire x1="58.42" y1="38.1" x2="49.53" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="40.64" x2="49.53" y2="38.1" width="0.1524" layer="91"/>
 <label x="49.53" y="38.1" size="1.778" layer="95"/>
+<pinref part="SW2" gate="G$1" pin="2"/>
+<junction x="58.42" y="40.64"/>
+<wire x1="58.42" y1="40.64" x2="58.42" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
 <pinref part="SW1" gate="G$1" pin="3"/>
 <pinref part="GND9" gate="1" pin="GND"/>
-<wire x1="81.28" y1="53.34" x2="85.09" y2="53.34" width="0.1524" layer="91"/>
-</segment>
-<segment>
+<wire x1="81.28" y1="55.88" x2="85.09" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="SW2" gate="G$1" pin="3"/>
+<junction x="81.28" y="55.88"/>
+<wire x1="81.28" y1="55.88" x2="81.28" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="GND10" gate="1" pin="GND"/>
 <pinref part="SW1" gate="G$1" pin="4"/>
-<wire x1="85.09" y1="38.1" x2="81.28" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="85.09" y1="38.1" x2="81.28" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="SW2" gate="G$1" pin="4"/>
+<junction x="81.28" y="40.64"/>
+<wire x1="81.28" y1="40.64" x2="81.28" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="55.88" x2="81.28" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C4" gate="G$1" pin="2"/>

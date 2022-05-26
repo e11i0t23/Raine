@@ -10577,6 +10577,16 @@ design rules under a new name.</description>
 <attribute name="NAME" x="152.71178125" y="-6.95903125" size="0.602065625" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="152.80723125" y="-11.262440625" size="0.6008875" layer="28" rot="MR270"/>
 </element>
+<element name="SW2" library="Keyboard_parts" library_urn="urn:adsk.eagle:library:6380734" package="SW_TL3342F160QG/TR" package3d_urn="urn:adsk.eagle:package:6174039/2" value="TL3342F160QG/TR" x="158.984" y="-83.032" smashed="yes" rot="MR0">
+<attribute name="DESCRIPTION" value=" Switch Tactile Spst-No 0.05a 12v " x="167.616" y="-72.328" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="DIGI-KEY_PART_NUMBER" value="EG2531CT-ND" x="167.616" y="-72.328" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="DIGI-KEY_PURCHASE_URL" value="https://www.digikey.co.uk/product-detail/en/e-switch/TL3342F160QG-TR/EG2531CT-ND/379004?utm_source=snapeda&amp;utm_medium=aggregator&amp;utm_campaign=symbol" x="167.616" y="-72.328" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="MF" value="E-Switch" x="167.616" y="-72.328" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="MP" value="TL3342F160QG/TR" x="167.616" y="-72.328" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="NAME" x="162.988890625" y="-79.027109375" size="0.81379375" layer="26" rot="MR0"/>
+<attribute name="PACKAGE" value="FakePackage u" x="167.616" y="-72.328" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="VALUE" x="162.992159375" y="-88.0422" size="0.814459375" layer="28" rot="MR0"/>
+</element>
 </elements>
 <signals>
 <signal name="ROW1" airwireshidden="yes">
@@ -10929,7 +10939,6 @@ design rules under a new name.</description>
 <contactref element="CR1" pad="2"/>
 <contactref element="CR1" pad="4"/>
 <contactref element="SW1" pad="3"/>
-<contactref element="SW1" pad="4"/>
 <contactref element="C4" pad="2"/>
 <contactref element="C8" pad="2"/>
 <contactref element="C7" pad="2"/>
@@ -11051,9 +11060,6 @@ design rules under a new name.</description>
 <via x="147.85" y="-8" extent="1-16" drill="0.35"/>
 <wire x1="147.85" y1="-8" x2="148.9952" y2="-9.1452" width="0.3048" layer="16"/>
 <wire x1="148.9952" y1="-9.1452" x2="148.9952" y2="-10.07625" width="0.3048" layer="16"/>
-<wire x1="149.36895" y1="-10.45" x2="148.9952" y2="-10.07625" width="0.3048" layer="16"/>
-<wire x1="155.85" y1="-81.1" x2="162.15" y2="-81.1" width="0.3048" layer="1"/>
-<wire x1="162.15" y1="-81.1" x2="164.25" y2="-83.2" width="0.3048" layer="1"/>
 <wire x1="164.25" y1="-83.2" x2="164.25" y2="-85.85" width="0.3048" layer="1"/>
 <wire x1="164.25" y1="-85.85" x2="159.5" y2="-90.6" width="0.3048" layer="1"/>
 <wire x1="159.5" y1="-90.6" x2="124.45" y2="-90.6" width="0.3048" layer="1"/>
@@ -11089,8 +11095,19 @@ design rules under a new name.</description>
 <wire x1="150.775" y1="-4.695" x2="151.025" y2="-4.695" width="0.2" layer="16"/>
 <contactref element="R3" pad="2"/>
 <contactref element="R4" pad="2"/>
-<wire x1="149.8" y1="-10.45" x2="154.5" y2="-10.45" width="0" layer="19" extent="16-16"/>
-<wire x1="149.36895" y1="-10.45" x2="149.8" y2="-10.45" width="0" layer="19" extent="16-16"/>
+<contactref element="SW2" pad="3"/>
+<contactref element="SW1" pad="4"/>
+<contactref element="SW2" pad="4"/>
+<wire x1="164.25" y1="-83.2" x2="162.15" y2="-81.1" width="0.3048" layer="1"/>
+<wire x1="162.15" y1="-81.1" x2="158.888" y2="-81.1" width="0.3048" layer="1"/>
+<wire x1="158.888" y1="-81.1" x2="155.85" y2="-81.1" width="0.3048" layer="1"/>
+<wire x1="155.834" y1="-81.132" x2="158.888" y2="-81.132" width="0.3048" layer="16"/>
+<wire x1="158.888" y1="-81.132" x2="162.134" y2="-81.132" width="0.3048" layer="16"/>
+<wire x1="158.888" y1="-81.132" x2="158.888" y2="-81.1" width="0.3048" layer="16"/>
+<via x="158.888" y="-81.1" extent="1-16" drill="0.35"/>
+<wire x1="149.8" y1="-10.45" x2="149.36895" y2="-10.45" width="0.3048" layer="16"/>
+<wire x1="149.36895" y1="-10.45" x2="148.9952" y2="-10.07625" width="0.3048" layer="16"/>
+<wire x1="154.5" y1="-10.45" x2="157.15" y2="-13.1" width="0.3048" layer="16"/>
 </signal>
 <signal name="+5V" airwireshidden="yes">
 <contactref element="U2" pad="14"/>
@@ -11177,9 +11194,8 @@ design rules under a new name.</description>
 <wire x1="163.65" y1="-85.25" x2="162.1" y2="-86.8" width="0.3048" layer="16"/>
 <wire x1="162.1" y1="-86.8" x2="161.85" y2="-86.8" width="0.3048" layer="16"/>
 <via x="161.85" y="-86.8" extent="1-16" drill="0.35"/>
-<wire x1="161.85" y1="-86.8" x2="160.89658125" y2="-86.8" width="0.3048" layer="1"/>
-<wire x1="160.89658125" y1="-86.8" x2="159.03938125" y2="-88.6572" width="0.3048" layer="1"/>
-<wire x1="159.03938125" y1="-88.6572" x2="135.01061875" y2="-88.6572" width="0.3048" layer="1"/>
+<wire x1="161.85" y1="-86.8" x2="159.9928" y2="-88.6572" width="0.3048" layer="1"/>
+<wire x1="159.9928" y1="-88.6572" x2="135.01061875" y2="-88.6572" width="0.3048" layer="1"/>
 <wire x1="135.01061875" y1="-88.6572" x2="133.448" y2="-87.09458125" width="0.3048" layer="1"/>
 <wire x1="154.05" y1="-84.1" x2="163.1" y2="-84.1" width="0.3048" layer="16"/>
 <wire x1="133.448021875" y1="-77.816259375" x2="133.1694" y2="-77.5376375" width="0.3048" layer="1"/>
@@ -11264,6 +11280,12 @@ design rules under a new name.</description>
 <wire x1="132.15" y1="-80" x2="134.25" y2="-82.1" width="0.3048" layer="16"/>
 <wire x1="133.9052" y1="-86.9052" x2="135.2" y2="-88.2" width="0.3048" layer="1"/>
 <wire x1="135.2" y1="-88.2" x2="158.85" y2="-88.2" width="0.3048" layer="1"/>
+<contactref element="SW2" pad="2"/>
+<wire x1="155.834" y1="-84.932" x2="157.276" y2="-84.932" width="0.3048" layer="16"/>
+<wire x1="157.276" y1="-84.932" x2="157.288" y2="-84.92" width="0.3048" layer="16"/>
+<via x="157.288" y="-84.92" extent="1-16" drill="0.35"/>
+<wire x1="157.288" y1="-84.92" x2="162.13" y2="-84.92" width="0.3048" layer="1"/>
+<wire x1="162.13" y1="-84.92" x2="162.15" y2="-84.9" width="0.3048" layer="1"/>
 </signal>
 <signal name="COL01" airwireshidden="yes">
 <contactref element="CTRL" pad="MX1"/>
@@ -11658,6 +11680,9 @@ design rules under a new name.</description>
 <via x="157.25" y="-86.45" extent="1-16" drill="0.35"/>
 <wire x1="157.25" y1="-86.45" x2="155.85" y2="-85.05" width="0.3048" layer="1"/>
 <wire x1="155.85" y1="-85.05" x2="155.85" y2="-84.9" width="0.3048" layer="1"/>
+<contactref element="SW2" pad="1"/>
+<wire x1="157.25" y1="-86.45" x2="158.768" y2="-84.932" width="0.3048" layer="16"/>
+<wire x1="158.768" y1="-84.932" x2="162.134" y2="-84.932" width="0.3048" layer="16"/>
 </signal>
 <signal name="N$1" airwireshidden="yes">
 <contactref element="DTAB" pad="A"/>
